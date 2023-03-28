@@ -8,6 +8,11 @@ variable "resource_group_name" {
   type = string
 }
 
+variable "storage_account_type" {
+  description = "The storage account type"
+  type = string
+}
+
 variable "azurerm_network_interface" {
   description = "The network interface of the azure account"
   type = string
@@ -42,11 +47,6 @@ variable "admin_ssh_key" {
   description = "The ssh key require  to login into the azure account"
   type = string
   default = "../.ssh/id_rsa.pub"
-}
-
-variable "storage_account_type" {
-  description = "The storage type of the instance"
-  type = string
 }
 
 variable "azurerm_network_security_group" {
